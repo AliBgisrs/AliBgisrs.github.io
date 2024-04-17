@@ -1,0 +1,136 @@
+/* Reset default margin and padding */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling for header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Container for centering main content */
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+/* Basic styling for main content */
+main {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Use grid layout with auto-fit columns */
+    grid-gap: 20px; /* Add gap between grid items */
+}
+
+/* Styling for other sections */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Add styles for buttons */
+button {
+    margin: 10px;
+}
+
+
+#reservation-form select,
+#reservation-form input[type="date"],
+#reservation-form textarea {
+    width: calc(100% - 22px); /* Adjust width to account for border and padding */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Include border and padding in width calculation */
+}
+
+#reservation-form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    width: 100%; /* Make button fill entire width */
+}
+
+#reservation-form button:hover {
+    background-color: #45a049;
+}
+
+/* Style reservations section */
+.reservation-item {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* Add styles for the reservation table */
+#reservation-table {
+    border-collapse: collapse; /* Collapse the borders into a single border */
+    width: 100%; /* Make the table fill its container */
+}
+
+#reservation-table th,
+#reservation-table td {
+    border: 1px solid #ddd; /* Add a 1px solid border around each cell */
+    padding: 8px; /* Add padding to the cells for spacing */
+    text-align: left; /* Align text to the left within cells */
+}
+
+#reservation-table th {
+    background-color: #f2f2f2; /* Add a light gray background color to header cells */
+    font-weight: bold; /* Make the header text bold */
+}
+
+/* Add table border styling */
+#this-week-reservations,
+#next-week-reservations {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#this-week-reservations th,
+#this-week-reservations td,
+#next-week-reservations th,
+#next-week-reservations td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+}
+
+#this-week-reservations th,
+#next-week-reservations th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+/* Example CSS for new form fields */
+#reservation-form label {
+    display: block;
+    margin-top: 5px;
+}
+
+#reservation-form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Checklist styles */
+#checklist {
+    width: 300px;
+    padding: 20px;
+    background-color: #f2f2f2;
+    margin-top: 0px; /* Adjust margin-top to move checklist higher up */
+}

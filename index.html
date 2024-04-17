@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drone and Sensor Reservation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="D:\NDSU\2024\websiteDesigning\download.jpg" alt="Header Image">
+        <h1>Drone and Sensor Reservation</h1>
+    </header>
+
+    <div class="container">
+        <main>
+        <section id="reservation-form-section">
+            <h2>Reservation Form</h2>
+            <form id="reservation-form">
+                <label for="name">Pilot:</label>
+        <select id="name">
+            <option value="Ali">Ali</option>
+            <option value="Anup">Anup</option>
+            <option value="Cristhian">Cristhian</option>
+            <option value="Jithin">Jithin</option>
+            <option value="Manaogna">Manaogna</option>
+            <option value="Maria">Maria</option>
+            <option value="Andre">Andre</option>
+            <option value="Ramita">Ramita</option>
+            <option value="Pualo">Pualo</option>
+            <option value="Justice">Justice</option>
+            <option value="Other">Other</option>
+                <label for="date">Date of Reservation:</label>
+                <input type="date" id="date" name="date" required>
+                <label for="drone">Drone:</label>
+        <select id="drone">
+            <option value="M300_SET1">M300_SET1</option>
+            <option value="M300_SET2">M300_SET2</option>
+            <option value="M300_SET3">M300_SET3</option>
+            <option value="M3200_SET1">M3200_SET1</option>
+            <option value="M200_SET2">M200_SET2</option>
+            <option value="M200_SET3">M200_SET3</option>
+            <option value="Mavic_SET1">Mavic_SET1</option>
+            <option value="Mavic_SET2">Mavic_SET2</option>
+            <option value="Mavic_SET3">Mavic_SET3</option>
+            <option value="AA">AA</option>
+            <option value="BB">BB</option>
+            <option value="CC">CC</option>
+            <option value="DD">DD</option>
+            <option value="EE">EE</option>
+            <option value="FF">FF</option>
+            <option value="HH">HH</option>
+                </select>
+                <label for="sensor">Sensor:</label>
+        	<select id="sensor">
+            <option value="Lidar">Lidar</option>
+            <option value="P1_SET1">P1_SET1</option>
+            <option value="P1_SET2">P1_SET2</option>
+            <option value="MicasebseDual">MicasebseDual</option>
+            <option value="Altumpt_SET1">Altumpt_SET1</option>
+            <option value="Altumpt_SET2">Altumpt_SET2</option>
+            <option value="Altumpt_SET3">Altumpt_SET3</option>
+            <option value="XT2">XT2</option>
+            <option value="AA">AA</option>
+            <option value="BB">BB</option>
+            <option value="CC">CC</option>
+            <option value="DD">DD</option>
+            <option value="EE">EE</option>
+            <option value="FF">FF</option>
+            <option value="HH">HH</option>
+</select>
+                <label for="co-pilot">Co-pilot:</label>
+		<select id="co-pilot">
+    	    <option value="Ali">Ali</option>
+            <option value="Anup">Anup</option>
+            <option value="Cristhian">Cristhian</option>
+            <option value="Jithin">Jithin</option>
+            <option value="Manaogna">Manaogna</option>
+            <option value="Maria">Maria</option>
+            <option value="Andre">Andre</option>
+            <option value="Ramita">Ramita</option>
+            <option value="Pualo">Pualo</option>
+            <option value="Justice">Justice</option>
+            <option value="Other">Other</option>
+</select>
+
+		<label for="drone2">Drone 2:</label>
+		<select id="drone2">
+    		<option value="M300_SET1">M300_SET1</option>
+            <option value="M300_SET2">M300_SET2</option>
+            <option value="M300_SET3">M300_SET3</option>
+            <option value="M3200_SET1">M3200_SET1</option>
+            <option value="M200_SET2">M200_SET2</option>
+            <option value="M200_SET3">M200_SET3</option>
+            <option value="Mavic_SET1">Mavic_SET1</option>
+            <option value="Mavic_SET2">Mavic_SET2</option>
+            <option value="Mavic_SET3">Mavic_SET3</option>
+            <option value="AA">AA</option>
+            <option value="BB">BB</option>
+            <option value="CC">CC</option>
+            <option value="DD">DD</option>
+            <option value="EE">EE</option>
+            <option value="FF">FF</option>
+            <option value="HH">HH</option>
+</select>
+
+		<label for="sensor2">Sensor 2:</label>
+		<select id="sensor2">
+    		<option value="Lidar">Lidar</option>
+            <option value="P1_SET1">P1_SET1</option>
+            <option value="P1_SET2">P1_SET2</option>
+            <option value="MicasebseDual">MicasebseDual</option>
+            <option value="Altumpt_SET1">Altumpt_SET1</option>
+            <option value="Altumpt_SET2">Altumpt_SET2</option>
+            <option value="Altumpt_SET3">Altumpt_SET3</option>
+            <option value="XT2">XT2</option>
+            <option value="AA">AA</option>
+            <option value="BB">BB</option>
+            <option value="CC">CC</option>
+            <option value="DD">DD</option>
+            <option value="EE">EE</option>
+            <option value="FF">FF</option>
+            <option value="HH">HH</option>
+</select>
+
+<label for="batteries">Number of Needed Batteries:</label>
+<select id="batteries" name="batteries">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+</select>
+
+<label for="location">Location:</label>
+<input type="text" id="location" name="location" required>
+
+<label for="comments">Additional Comments:</label>
+<textarea id="comments" name="comments"></textarea>
+
+<button type="submit">Submit Reservation</button>
+</main>
+    </div>
+<!-- Checklist -->
+    <div id="checklist">
+        <h2>Checklist</h2>
+        <ul>
+            <li>Drones</li>
+            <li>Sensors</li>
+            <li>Hotspot</li>
+            <li>Cables</li>
+            <li>Calibration Panels</li>
+        </ul>
+    </div>
+        <section id="reservations">
+    <h2>This Week's Reservations</h2>
+    <table id="this-week-reservations">
+        <tr>
+            <th>Date</th>
+            <th>Day of Week</th>
+            <th>Sensor Type</th>
+            <th>Drone Type</th>
+            <th>Batteries</th>
+            <th>Name</th>
+            <th>Location</th>
+	    <th>Co-pilot</th>
+            <th>Drone 2</th>
+            <th>Sensor 2</th>
+        </tr>
+    </table>
+    <h2>Next Week's Reservations</h2>
+    <table id="next-week-reservations">
+        <tr>
+            <th>Date</th>
+            <th>Day of Week</th>
+            <th>Sensor Type</th>
+            <th>Drone Type</th>
+            <th>Batteries</th>
+            <th>Name</th>
+            <th>Location</th>
+	    <th>Co-pilot</th>
+    	    <th>Drone 2</th>
+    	    <th>Sensor 2</th>
+        </tr>
+    </table>
+</section>
+
+
+
+
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Powered by Ali</p>
+    </footer>
+
+    <!-- New buttons for exporting and copying reservations data -->
+    <button id="export-button">Export Reservations</button>
+    <button id="copy-button">Copy Reservations Data</button>
+    <!-- New button for exporting removed records -->
+    <button id="removed-records-button">Export Removed Records</button>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
