@@ -1,6 +1,6 @@
 // Initialize the Octokit client with your GitHub access token
 const { Octokit } = require("@octokit/core");
-const octokit = new Octokit({ auth: "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" });
+const octokit = new Octokit({ auth: "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" });
 
 document.addEventListener('DOMContentLoaded', function() {
   const form = document.getElementById('reservation-form');
