@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base target="_top">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    h2 {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    select {
+      width: 30%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    input[type="date"],
+    input[type="number"],
+    input[type="text"] {
+      width: 30%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    input[type="button"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    input[type="button"]:hover {
+      background-color: #45a049;
+    }
+
+    .error-message {
+      color: red;
+    }
+
+    /* Add margin to checklist for spacing */
+    #checklist {
+      margin-top: 20px;
+    }
+
+    /* Style for images */
+    .image-container {
+      float: right;
+      width: 55%;
+      margin-left: 10px;
+    }
+
+    .image-container img {
+      width: 80%;
+      display: block;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Drone & Sensor Reservation Form 2024</h2>
+  <form id="myForm">
+    <div class="form-group">
+      <label for="pilot">Pilot <span class="mandatory">*</span>:</label>
+      <div class="image-container">
+        <img src="https://i.postimg.cc/SRGM6pyw/c02d0b95-50ba-487a-88e0-0a5dafded2dc.jpg" alt="Image 0">
+      </div>
+      <select id="pilot" name="pilot">
+        <option value="">Select Pilot</option>
+        <option value="Ali">Ali</option>
+        <option value="Anup">Anup</option>
+        <option value="Cristhian">Cristhian</option>
+        <option value="George">George</option>
+        <option value="Paulo">Paulo</option>
+        <option value="Ramita">Ramita</option>
+        <option value="Manogna">Manogna</option>
+        <option value="Justice">Justice</option>
+        <option value="Jithin">Jithin</option>
+        <option value="Maria">Maria</option>
+        <option value="Andre">Andre</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="date">Date<span class="mandatory">*</span>:</label>
+      <input type="date" id="date" name="date">
+    </div>
+    <div class="form-group">
+      <label for="dayOfWeek">Day of week:</label>
+      <input type="text" id="dayOfWeek" name="dayOfWeek" readonly>
+    </div>
+    <div class="form-group">
+      <label for="drone1">Drone 1<span class="mandatory">*</span>:</label>
+      <select id="drone1" name="drone1">
+        <option value="">Select Drone 1</option>
+        <option value="M300_SET1">M300_SET1</option>
+        <option value="M300_SET2">M300_SET2</option>
+        <option value="M300_SET3">M300_SET3</option>
+        <option value="M200_SET1">M200_SET1</option>
+        <option value="M200_SET2">M200_SET2</option>
+        <option value="M200_SET3">M200_SET3</option>
+        <option value="Mavic">Mavic</option>
+        <option value="Wingtra_Set1">Wingtra_Set1</option>
+        <option value="Wingtra_Set2">Wingtra_Set2</option>
+        <option value="Mavicc">Mavicc</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="sensor1">Sensor 1<span class="mandatory">*</span>:</label>
+      <select id="sensor1" name="sensor1">
+        <option value="">Select Sensor 1</option>
+        <option value="MicaSenseDual_Set1">MicaSenseDual_Set1</option>
+        <option value="MicaSenseDual_Set2">MicaSenseDual_Set2</option>
+        <option value="P1">P1</option>
+        <option value="Lidar">Lidar</option>
+        <option value="XT2">XT2</option>
+        <option value="65r">65r</option>
+        <option value="Altumpt_Set1">Altumpt_Set1</option>
+        <option value="Altumpt_Set2">Altumpt_Set2</option>
+        <option value="Altumpt_Set3">Altumpt_Set3</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="drone2">Drone 2<span class="mandatory">*</span>:</label>
+      <div class="image-container">
+        <img src="https://syndico.net/wp-content/uploads/2021/01/zenmusel1-web-1000px-5.jpg" alt="Image 1">
+      </div>
+      <select id="drone2" name="drone2">
+        <option value="">Select Drone 2</option>
+        <option value="None">None</option>
+        <option value="M300_SET1">M300_SET1</option>
+        <option value="M300_SET2">M300_SET2</option>
+        <option value="M300_SET3">M300_SET3</option>
+        <option value="M200_SET1">M200_SET1</option>
+        <option value="M200_SET2">M200_SET2</option>
+        <option value="M200_SET3">M200_SET3</option>
+        <option value="Mavic">Mavic</option>
+        <option value="Wingtra_Set1">Wingtra_Set1</option>
+        <option value="Wingtra_Set2">Wingtra_Set2</option>
+        <option value="Mavicc">Mavicc</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="sensor2">Sensor 2<span class="mandatory">*</span>:</label>
+      <select id="sensor2" name="sensor2">
+        <option value="">Select Sensor 2</option>
+        <option value="None">None</option>
+        <option value="MicaSenseDual_Set1">MicaSenseDual_Set1</option>
+        <option value="MicaSenseDual_Set2">MicaSenseDual_Set2</option>
+        <option value="P1">P1</option>
+        <option value="Lidar">Lidar</option>
+        <option value="XT2">XT2</option>
+        <option value="65r">65r</option>
+        <option value="Altumpt_Set1">Altumpt_Set1</option>
+        <option value="Altumpt_Set2">Altumpt_Set2</option>
+        <option value="Altumpt_Set3">Altumpt_Set3</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="drone3">Drone 3:</label>
+      <select id="drone3" name="drone3">
+        <option value="">Select Drone 3</option>
+        <option value="None">None</option>
+        <option value="M300_SET1">M300_SET1</option>
+        <option value="M300_SET2">M300_SET2</option>
+        <option value="M300_SET3">M300_SET3</option>
+        <option value="M200_SET1">M200_SET1</option>
+        <option value="M200_SET2">M200_SET2</option>
+        <option value="M200_SET3">M200_SET3</option>
+        <option value="Mavic">Mavic</option>
+        <option value="Wingtra_Set1">Wingtra_Set1</option>
+        <option value="Wingtra_Set2">Wingtra_Set2</option>
+        <option value="Mavicc">Mavicc</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="sensor3">Sensor 3:</label>
+      <select id="sensor3" name="sensor3">
+        <option value="">Select Sensor 3</option>
+        <option value="None">None</option>
+        <option value="MicaSenseDual_Set1">MicaSenseDual_Set1</option>
+        <option value="MicaSenseDual_Set2">MicaSenseDual_Set2</option>
+        <option value="P1">P1</option>
+        <option value="Lidar">Lidar</option>
+        <option value="XT2">XT2</option>
+        <option value="65r">65r</option>
+        <option value="Altumpt_Set1">Altumpt_Set1</option>
+        <option value="Altumpt_Set2">Altumpt_Set2</option>
+        <option value="Altumpt_Set3">Altumpt_Set3</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="drone4">Drone 4:</label>
+      <select id="drone4" name="drone4">
+        <option value="">Select Drone 4</option>
+        <option value="None">None</option>
+        <option value="M300_SET1">M300_SET1</option>
+        <option value="M300_SET2">M300_SET2</option>
+        <option value="M300_SET3">M300_SET3</option>
+        <option value="M200_SET1">M200_SET1</option>
+        <option value="M200_SET2">M200_SET2</option>
+        <option value="M200_SET3">M200_SET3</option>
+        <option value="Mavic">Mavic</option>
+        <option value="Wingtra_Set1">Wingtra_Set1</option>
+        <option value="Wingtra_Set2">Wingtra_Set2</option>
+        <option value="Mavicc">Mavicc</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="sensor4">Sensor 4:</label>
+      <select id="sensor4" name="sensor4">
+        <option value="">Select Sensor 4</option>
+        <option value="None">None</option>
+        <option value="MicaSenseDual_Set1">MicaSenseDual_Set1</option>
+        <option value="MicaSenseDual_Set2">MicaSenseDual_Set2</option>
+        <option value="P1">P1</option>
+        <option value="Lidar">Lidar</option>
+        <option value="XT2">XT2</option>
+        <option value="65r">65r</option>
+        <option value="Altumpt_Set1">Altumpt_Set1</option>
+        <option value="Altumpt_Set2">Altumpt_Set2</option>
+        <option value="Altumpt_Set3">Altumpt_Set3</option>
+      </select>
+    </div>
+    <!-- Copilot section -->
+    <div class="form-group">
+      <label for="copilot">Copilot<span class="mandatory">*</span>:</label>
+      <select id="copilot" name="copilot">
+        <option value="">Select Copilot</option>
+        <option value="None">None</option>
+        <option value="Ali">Ali</option>
+        <option value="Anup">Anup</option>
+        <option value="Cristhian">Cristhian</option>
+        <option value="George">George</option>
+        <option value="Paulo">Paulo</option>
+        <option value="Ramita">Ramita</option>
+        <option value="Manogna">Manogna</option>
+        <option value="Justice">Justice</option>
+        <option value="Jithin">Jithin</option>
+        <option value="Maria">Maria</option>
+        <option value="Andre">Andre</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+    <!-- Battery section -->
+    <div class="form-group">
+      <label for="battery">Battery<span class="mandatory">*</span>:</label>
+      <input type="number" id="battery" name="battery" min="0" max="4">
+    </div>
+    <div class="form-group">
+      <label for="location">Location<span class="mandatory">*</span>:</label>
+      <div class="image-container">
+        <img src="https://store.terrestrialimaging.com/assets/images/micasense-rededge-mx-dual-camera-kit-3.jpg" alt="Image 1">
+      </div>
+      <input type="text" id="location" name="location">
+    </div>
+    <input type="button" value="Submit" onclick="confirmSubmission()">
+    <a href="https://docs.google.com/spreadsheets/d/1cqH3pkSTo3tvoS-XPfbUXAoTc_CBOJFIbNe5imJL8kY/edit?usp=sharing" target="_blank"><input type="button" value="View Results"></a>
+    <div id="error-message" class="error-message" style="display: none;"></div>
+  </form>
+  <!-- Checklist Section -->
+  <div id="checklist">
+    <h3>Checklist</h3>
+    <ul>
+      <li>Drone(s)</li>
+      <li>Sensor(s)</li>
+      <li>Battery</li>
+      <li>Cable(s)</li>
+      <li>Wifi</li>
+      <li>Tablet(s)</li>
+      <li>Driver License</li>
+      <li>Vest</li>
+    </ul>
+  </div>
+
+  
+  <script>
+    // JavaScript functions
+    function confirmSubmission() {
+      var confirmed = confirm("Are you sure you want to submit the form?");
+      if (confirmed) {
+        submitForm();
+      }
+    }
+
+    function submitForm() {
+      var form = document.getElementById("myForm");
+      var pilot = form.elements["pilot"].value;
+      var date = form.elements["date"].value;
+      var drone1 = form.elements["drone1"].value;
+      var sensor1 = form.elements["sensor1"].value;
+      var drone2 = form.elements["drone2"].value;
+      var sensor2 = form.elements["sensor2"].value;
+      var drone3 = form.elements["drone3"].value;
+      var sensor3 = form.elements["sensor3"].value;
+      var drone4 = form.elements["drone4"].value;
+      var sensor4 = form.elements["sensor4"].value;
+      var copilot = form.elements["copilot"].value;
+      var battery = form.elements["battery"].value;
+      var location = form.elements["location"].value;
+      // Check if mandatory fields are filled out
+      if (!pilot || !date || !drone1 || !sensor1 || !drone2 || !sensor2 || !copilot || !battery || !location) {
+        document.getElementById("error-message").innerText = "Please fill out all mandatory fields.";
+        document.getElementById("error-message").style.display = "block";
+        return;
+      } else {
+        document.getElementById("error-message").style.display = "none";
+      }
+
+      
+
+
+
+      google.script.run.withSuccessHandler(function(response) {
+        if (response.startsWith("Error:")) {
+          alert(response);
+        } else {
+          confirm("Reservation successful! Do you want to view the results?");
+        }
+        form.reset();
+      }).submitForm(form);
+    }
+    document.getElementById("date").addEventListener("change", function() {
+      var selectedDate = new Date(this.value);
+      var options = { weekday: 'long', timeZone: 'UTC' };
+      var dayOfWeek = selectedDate.toLocaleDateString('en-US', options);
+      document.getElementById("dayOfWeek").value = dayOfWeek;
+    });
+  </script>
+</body>
+</html>

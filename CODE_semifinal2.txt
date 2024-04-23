@@ -1,0 +1,53 @@
+// Function to handle form submission
+function submitForm(form) {
+  const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  const lastRow = sheet.getLastRow();
+  const range = sheet.getRange(2, 1, lastRow, 14); // Adjust the range according to your sheet structure
+  const data = range.getValues().flat();
+
+  // Check for duplicate drone or sensor reservation
+  for (let i = 0; i < data.length; i += 14) {
+    // Skip checking if any of drone 2, drone 3, drone 4, sensor 2, sensor 3, or sensor 4 is "None"
+    if ((form.drone2 === 'None' || form.sensor2 === 'None' || form.drone3 === 'None' || form.sensor3 === 'None' || form.drone4 === 'None' || form.sensor4 === 'None') && data[i + 2] === form.dayOfWeek && (data[i + 3] === form.drone1 || data[i + 4] === form.sensor1)) {
+      return 'Error: This drone/sensor is already reserved for this day. Please choose another date or drone/sensor.';
+    }
+    // Check for duplicate reservation only if all drones and sensors are selected
+    if (form.drone2 !== 'None' && form.sensor2 !== 'None' && form.drone3 !== 'None' && form.sensor3 !== 'None' && form.drone4 !== 'None' && form.sensor4 !== 'None' && data[i + 2] === form.dayOfWeek && (data[i + 3] === form.drone1 || data[i + 4] === form.sensor1 || data[i + 5] === form.drone2 || data[i + 6] === form.sensor2 || data[i + 7] === form.drone3 || data[i + 8] === form.sensor3 || data[i + 9] === form.drone4 || data[i + 10] === form.sensor4)) {
+      return 'Error: This drone/sensor is already reserved for this day. Please choose another date or drone/sensor.';
+    }
+  }
+
+  // Append the row if no duplicate is found
+  const values = [
+    form.pilot,
+    form.date,
+    form.dayOfWeek,
+    form.drone1,
+    form.sensor1,
+    form.drone2,
+    form.sensor2,
+    form.drone3,
+    form.sensor3,
+    form.drone4,
+    form.sensor4,
+    form.copilot,
+    form.battery,
+    form.location
+  ];
+  sheet.getRange(lastRow + 1, 1, 1, values.length).setValues([values]);
+  return 'Reservation successful!';
+}
+
+// Function to initialize the HTML page and create the web app
+function doGet() {
+  return HtmlService.createTemplateFromFile('index').evaluate();
+}
+
+// Function to redirect to the spreadsheet with submitted records
+function viewResults() {
+  const spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
+  const url = spreadsheet.getUrl();
+  const id = spreadsheet.getId();
+  const urlWithId = url.replace(/\/edit.*$/, '') + '/edit#gid=' + id;
+  return HtmlService.createHtmlOutput('<script>window.open("' + urlWithId + '");</script>');
+}
